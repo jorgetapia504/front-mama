@@ -35,7 +35,7 @@ const Santander = () => {
   const getData = async () => {
     setData([])
     setLoadingData(true)
-    const response = await axios.get('http://localhost:4000/santander/get-data')
+    const response = await axios.get('https://server-mama-production.up.railway.app/santander/get-data')
     setData(response.data)
     setLoadingData(false)
   }
@@ -99,7 +99,7 @@ const Santander = () => {
       return
     }
     try {
-      const response = await axios.post('http://localhost:4000/santander/upload-excel', file)
+      const response = await axios.post('https://server-mama-production.up.railway.app/santander/upload-excel', file)
       console.log(response.data)
     } catch (error) {
       console.error(error)
@@ -123,7 +123,7 @@ const Santander = () => {
 
   const handleSubmitFilter = async () => {
     setLoadingFilter(true)
-    await axios.post('http://localhost:4000/santander/create-filter', newFilter)
+    await axios.post('https://server-mama-production.up.railway.app/santander/create-filter', newFilter)
     setLoadingFilter(false)
     setFilterOpacity('opacity-0')
     setTimeout(() => {
@@ -141,7 +141,7 @@ const Santander = () => {
   const handleFilter = async () => {
     setData([])
     setLoadingData(true)
-    const response = await axios.post('http://localhost:4000/santander/get-data', filters)
+    const response = await axios.post('https://server-mama-production.up.railway.app/santander/get-data', filters)
     setData(response.data)
     setLoadingData(false)
   }
