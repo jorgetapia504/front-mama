@@ -156,7 +156,7 @@ const Santander = () => {
           <h2 className='text-xl mb-4'>Subir datos</h2>
           <p className='mb-4'>Subir archivo Excel con la cartola del banco.</p>
           <input type='file' onChange={handleFileUpload} className='mb-4' />
-          <button onClick={handleSubmit} className='bg-teal-500 my-auto block text-white w-full h-10 rounded'>{loading ? <Spinner2 /> : 'Subir'}</button>
+          <button onClick={handleSubmit} className='bg-[#1c4b82] my-auto block text-white w-full h-10 rounded'>{loading ? <Spinner2 /> : 'Subir'}</button>
         </div>
       </div>
       <div onClick={closeFilter} className={`${filterDisplay} ${filterOpacity} transition-opacity duration-200 absolute w-full h-screen bg-black/20`}>
@@ -235,7 +235,7 @@ const Santander = () => {
               )
               : ''
           }
-          <button onClick={handleSubmitFilter} className='bg-teal-500 my-auto block text-white w-full h-10 rounded'>{loadingFilter ? <Spinner2 /> : 'Crear'}</button>
+          <button onClick={handleSubmitFilter} className='bg-[#1c4b82] my-auto block text-white w-full h-10 rounded'>{loadingFilter ? <Spinner2 /> : 'Crear'}</button>
         </div>
       </div>
       <MainLayout>
@@ -245,7 +245,7 @@ const Santander = () => {
               <h1 className='text-3xl'>Banco Santander</h1>
               <div className='flex gap-2'>
                 <button onClick={viewFilter} className='h-fit my-auto px-8 py-2 rounded'>Agregar filtro</button>
-                <button onClick={viewPopup} className='bg-teal-500 h-fit my-auto text-white px-8 py-2 rounded'>Subir nuevos datos</button>
+                <button onClick={viewPopup} className='bg-[#1c4b82] h-fit my-auto text-white px-8 py-2 rounded'>Subir nuevos datos</button>
               </div>
             </div>
             <div className='flex gap-2'>
@@ -253,15 +253,15 @@ const Santander = () => {
             </div>
             <div className='flex gap-4'>
               <div className='flex gap-2'>
-                <button className={`p-6 border ${filters.code?.substring(0, 1) === '1' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '1'})}>
+                <button className={`p-6 border ${filters.code?.substring(0, 1) === '1' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '1'})}>
                   <p>Ingresos</p>
                   <p>i - 1</p>
                 </button>
-                <button className={`p-6 border ${filters.code?.substring(0, 1) === '2' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '2'})}>
+                <button className={`p-6 border ${filters.code?.substring(0, 1) === '2' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '2'})}>
                   <p>Egresos</p>
                   <p>e - 2</p>
                 </button>
-                <button className={`p-6 border ${filters.code?.substring(0, 1) === '3' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '3'})}>
+                <button className={`p-6 border ${filters.code?.substring(0, 1) === '3' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '3'})}>
                   <p>Movimientos socios</p>
                   <p>s - 3</p>
                 </button>
@@ -271,7 +271,7 @@ const Santander = () => {
                 filters.code?.substring(0, 1) === '1'
                   ? (
                     <div className='flex gap-2'>
-                      <button className={`p-4 border ${filters.code.substring(0, 2) === '11' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '11'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 2) === '11' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '11'})}>
                         <p>Clientes</p>
                         <p>ic - 11</p>
                       </button>
@@ -283,31 +283,31 @@ const Santander = () => {
                 filters.code?.substring(0, 1) === '2'
                   ? (
                     <div className='flex gap-2'>
-                      <button className={`p-4 border ${filters.code.substring(0, 2) === '21' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '21'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 2) === '21' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '21'})}>
                         <p>Proveedores</p>
                         <p>ep - 21</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 2) === '22' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '22'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 2) === '22' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '22'})}>
                         <p>Sueldos</p>
                         <p>es - 22</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 2) === '23' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '23'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 2) === '23' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '23'})}>
                         <p>Banco</p>
                         <p>eb - 23</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 2) === '24' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '24'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 2) === '24' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '24'})}>
                         <p>Gastos</p>
                         <p>eg - 24</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 2) === '25' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '25'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 2) === '25' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '25'})}>
                         <p>Pagos cheques</p>
                         <p>ec - 25</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 2) === '26' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '26'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 2) === '26' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '26'})}>
                         <p>Transferencias</p>
                         <p>et - 26</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 2) === '27' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '27'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 2) === '27' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '27'})}>
                         <p>Impuestos</p>
                         <p>ei - 27</p>
                       </button>
@@ -319,15 +319,15 @@ const Santander = () => {
                 filters.code?.substring(0, 2) === '11'
                   ? (
                     <div className='flex gap-2'>
-                      <button className={`p-4 border ${filters.code.substring(0, 3) === '111' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '111'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 3) === '111' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '111'})}>
                         <p>Transbank</p>
                         <p>ict - 111</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 3) === '112' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '112'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 3) === '112' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '112'})}>
                         <p>Efectivo</p>
                         <p>ice - 112</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 3) === '113' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '113'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 3) === '113' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '113'})}>
                         <p>Transferencia</p>
                         <p>icd - 113</p>
                       </button>
@@ -339,11 +339,11 @@ const Santander = () => {
                 filters.code?.substring(0, 2) === '21'
                   ? (
                     <div className='flex gap-2'>
-                      <button className={`p-4 border ${filters.code.substring(0, 3) === '211' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '211'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 3) === '211' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '211'})}>
                         <p>Maderas</p>
                         <p>epa - 211</p>
                       </button>
-                      <button className={`p-4 border ${filters.code.substring(0, 3) === '212' ? 'border-sky-500 text-sky-500' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '212'})}>
+                      <button className={`p-4 border ${filters.code.substring(0, 3) === '212' ? 'border-[#1c4b82] text-[#1c4b82]' : ''} rounded-lg`} onClick={() => setFilters({...filters, code: '212'})}>
                         <p>Quincallería</p>
                         <p>epq - 212</p>
                       </button>
@@ -362,7 +362,7 @@ const Santander = () => {
               </div>
             </div>
             <div className='flex gap-4'>
-              <button onClick={handleFilter} className='bg-teal-500 h-fit my-auto text-white px-8 py-2 rounded'>Buscar</button>
+              <button onClick={handleFilter} className='bg-[#1c4b82] h-fit my-auto text-white px-8 py-2 rounded'>Buscar</button>
             </div>
             {
               data?.length
