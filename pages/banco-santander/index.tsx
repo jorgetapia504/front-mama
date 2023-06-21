@@ -149,7 +149,7 @@ const Santander = () => {
   return (
     <>
       <Head>
-        <title>Banco Santandera</title>
+        <title>Banco Santander</title>
       </Head>
       <div onClick={closePopup} className={`${popupDisplay} ${popupOpacity} transition-opacity duration-200 absolute w-full h-screen bg-black/20`}>
         <div onMouseEnter={() => setMousePopup(true)} onMouseLeave={() => setMousePopup(false)} className={`p-4 bg-white rounded-md shadow-md w-[500px] m-auto`}>
